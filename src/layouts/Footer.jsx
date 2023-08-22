@@ -2,6 +2,15 @@ import React from 'react';
 import polygon from "../assets/polygon.svg";
 import smile from "../assets/smile.svg";
 
+const scrollTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+
+
 const Footer = () => {
   return (
     <footer>
@@ -20,7 +29,7 @@ const Footer = () => {
           </div>
           <div className="top flex">
             <img src={polygon} alt="" className="polygon" />
-            <p className='text'>scroll top</p>
+            <p onClick={scrollTop} className='text'>scroll top</p>
           </div>
         </div>
       </div>
