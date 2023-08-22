@@ -3,6 +3,7 @@
 :root {
   --primary-color: #011F30;
   --dark-color: rgba(245, 245, 245, 0.04);
+  --fill-color:  rgba(255, 255, 255, 0.25); 
 
   --secondary-color: #FFC87C;
   --secondary-color-2: #FFC87CE5;
@@ -29,6 +30,8 @@
   --gradient-h1: linear-gradient(126deg, #FAFAFA 0%, rgba(188, 234, 255, 0.90) 100%);
 
 }
+
+
 
 
 * {
@@ -90,6 +93,7 @@ body {
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0.5px;
+  color: var(--text-plain);
 }
 
 .link {
@@ -102,15 +106,16 @@ body {
 }
 
 .polygon {
-  width: 30px;
-  height: 30px;
-  transform: rotate(90deg);
+  width: 20px;
+  height: 20px;
+  transform: rotate(0deg);
 }
 
 .flex {
   display: flex;
   align-items: center;
 }
+
 .btn-primary {
   width: 150px;
   text-align: center;
@@ -123,10 +128,46 @@ body {
   background: var(--gradient-cc);
   font-size: 16px;
 }
+section {
+  min-height: 100dvh;
+  padding: var(--padd-sm) var(--padd-md);
+}
+
+/* ===== scroll bar ==== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tertiary-color);
+  border-radius: 2px;
+}
+
+/* ::-webkit-scrollbar-button {
+  background-image: url('../src/assets/scroll.svg');
+  background-size: cover;
+}
+
+::-webkit-scrollbar-button:start:decrement {
+  display: block;
+}
+
+::-webkit-scrollbar-button:end:increment {
+  display: block;
+  transform: rotate(180deg);
+} */
+
+
+
 
 /* ---------------- navbar css --------------------  */
 .navbar {
-  position: fixed;
+  position: sticky;
+  top: 0;
   width: 100%;
   backdrop-filter: blur(15px);
   margin-bottom: var(--padd-lg);
@@ -144,6 +185,7 @@ body {
   padding: var(--padd-sm) var(--padd-md);
   justify-content: space-between;
 }
+
 .navbar .logo {
   cursor: pointer;
 }
@@ -164,7 +206,7 @@ body {
   color: var(--text-plain);
   text-transform: capitalize;
   transition: all .2s ease-in;
-  font-size: 1em ;
+  font-size: 1em;
   font-weight: 400;
   line-height: normal;
   letter-spacing: 1px;
@@ -172,6 +214,7 @@ body {
   padding: 0px 5px;
 
 }
+
 .navbar .nav-items .nav-link::after {
   position: absolute;
   bottom: -18px;
@@ -187,6 +230,57 @@ body {
 .navbar .nav-items .nav-link:hover::after {
   width: 100%;
 }
+
 .navbar .nav-items .nav-link:active::after {
   width: 100%;
+}
+
+/* ------------- footer ---------------- */
+footer {
+  width: 100%;
+  font-size: 14px;
+  letter-spacing: normal;
+}
+
+footer::before {
+  content: "";
+  height: 1px;
+  display: block;
+  background: var(--tertiary-color);
+  width: 100%;
+
+}
+
+.footer {
+  align-items: start;
+  gap: 5px;
+  flex-direction: column;
+  padding: var(--padd-sm) var(--padd-md);
+}
+.footer .footer-items {
+  justify-content: space-between;
+}
+.footer .top {
+  cursor: pointer;
+}
+.footer .user,
+.footer .top {
+  gap: 5px;
+} 
+.footer .link-user:hover {
+  text-decoration: dotted;
+  color: var(--secondary-color-2);
+}
+.footer .title {
+  color: #FFF;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+.footer .copy {
+  font-size: 18px;
+  font-weight: 400;
+  margin-right: 5px;
+}
+.footer .rights .text {
+  text-transform: capitalize;
 }
