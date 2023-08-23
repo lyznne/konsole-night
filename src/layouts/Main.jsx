@@ -7,6 +7,7 @@ import copy from "../assets/copy.svg";
 import Card from '../components/Card';
 import bottomCardDetails from "../models/DataDetails.jsx";
 import copyDetails from '../models/copyDetails';
+import Languages from '../components/Languages';
 
 
 
@@ -85,9 +86,7 @@ const Main = () => {
           <div className="features-content">
 
           </div>
-          <div className="languages">
-            <h1 className="text-gradient text-span h1">supported languages</h1>
-          </div>
+          <Languages />
         </div>
       </section>
 

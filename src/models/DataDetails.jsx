@@ -14,7 +14,7 @@ const bottomCardDetails = [
   {
     icon: rss,
     title: " feedback & review" ,
-    description: "A  positive feedback is much appreciated",
+    description: "A  positive feedback is much appreciated 💫💫",
     link: "feedback ",
     linkUrl: ""
   },
@@ -28,7 +28,7 @@ const bottomCardDetails = [
   {
     icon: installs,
     title: "installs",
-    description: "more than 1000+ installs from the marketplace  is limit",
+    description: "more than 1000+ installs from the marketplace  is limit ",
     link: "marketplace",
     linkUrl: "https://www.github/lyznne"
   }
