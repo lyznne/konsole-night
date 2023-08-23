@@ -3,8 +3,10 @@ import { useState } from 'react';
 import Footer from './Footer';
 import award from "../assets/award.svg";
 import clock from "../assets/clock.svg";
+import copy from "../assets/copy.svg";
 import Card from '../components/Card';
 import bottomCardDetails from "../models/DataDetails.jsx";
+import copyDetails from '../models/copyDetails';
 
 
 
@@ -17,6 +19,27 @@ const Main = () => {
   const handleTabClick = (tabIndex) => {
     setActiveTab(tabIndex);
   };
+
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyClick = (event) => {
+    const buttonIndex = event.target.classList[0].split('-')[2];
+    const content = copyDetails[buttonIndex].content;
+    navigator.clipboard.writeText(content);
+    setCopied(true);
+    setTimeout(() => {
+      setCopied(false);
+    }, 1000);
+  };
+
+  const [isCardBodyOpen, setIsCardBodyOpen] = useState([true, false, false]);
+
+  const toggleCardBody = (index) => {
+    const updatedStates = [...isCardBodyOpen];
+    updatedStates[index] = !updatedStates[index];
+    setIsCardBodyOpen(updatedStates);
+  };
+
 
   return (
     <div className="main">
@@ -55,22 +78,98 @@ const Main = () => {
       </section>
       <section id="features">
         <div className="features">
-          <h1>
-            Deliver an optimized <span className="text-gradient">User Experience</span>
+          <h1 className='h1'>
+            Deliver an optimized <span className="text-gradient text-span">User Experience</span>
           </h1>
           <p className="text">There are plenty of essential features optimized to provide the best user experience.</p>
           <div className="features-content">
 
           </div>
           <div className="languages">
-            <h1 className="text-gradient">supported languages</h1>
+            <h1 className="text-gradient text-span h1">supported languages</h1>
           </div>
         </div>
       </section>
+
+
       <section id="installation">
-        <h1>How to <span className="text-gradient">install ?</span></h1>
-        <p className='text'> If you encounter any issues, please <a className='link' href="#" target="_blank" >open an issue</a> on the GitHub repository.</p>
+        <div className="section-head">
+          <h1 className='h1' >How to <span className="text-gradient  text-span">install the theme ?</span></h1>
+          <p className='text'> If you encounter any issues, please <a className='link' href="#" target="_blank" >open an issue</a> on the GitHub repository.</p>
+        </div>
+        <div className="section-center">
+          <div className="section--contents">
+            <div className="card install-card">
+              <div className="card-top" onClick={() => toggleCardBody(0)}>
+
+                through visual studio code
+              </div>
+              <div className={`install-card-body ${isCardBodyOpen[0] ? 'open' : 'closed'}`}>
+                <ul className='text'>
+                  <li>open <span className='span'>visual studio code .</span></li>
+                  <li>Go to the Extensions view by clicking extension icon or pressing  <span className="span-bg">Cmd+Shift+X</span> on macOS <span className='span-bg'>Ctrl+Shift+X </span></li>
+                  <li>Search for <span className="span">"Konsole Night"</span> in the extensions marketplace.</li>
+                  <li>Once installed, go to the <span className="span">"Preferences"</span> menu <span className="span-bg">Ctrl+</span>, or <span className="span-bg">Cmd+</span>, on macOS.</li>
+                  <li>Select <span className="span">"Color Theme"</span> from the sidebar menu.</li>
+                  <li>Choose <span className="span">"Konsole Night"</span> from the available themes.</li>
+                </ul>
+              </div>
+            </div>
+            <div className="card install-card">
+              <div className="card-top" onClick={() => toggleCardBody(1)}>
+                through visual studio marketplace
+              </div>
+              <div className={`install-card-body ${isCardBodyOpen[1] ? 'open' : 'closed'}`}>
+                <ul className='text'>
+                  <li>open <span className="span">visual studio marketplace.</span></li>
+                  <li>search for <span className='span'>konsole night</span></li>
+                  <li>
+                    or copy link <div className="span-github">
+                      <p>ext install Enoslyznne.konsole-night</p>
+                      <img
+                        src={copy}
+                        alt="copy"
+                        onClick={handleCopyClick}
+                        className={`copy-button-${0} ${copied ? 'copied' : ''}`}
+                      />
+                    </div>
+                  </li>
+                  <li>Launch VS Code Quick Open <span className="span-bg"> Ctrl+P</span>, paste the link, and press enter.</li>
+                </ul>
+              </div>
+            </div>
+            <div className="card install-card">
+              <div className="card-top" onClick={() => toggleCardBody(2)}>
+                from github
+              </div>
+              <div className={`install-card-body ${isCardBodyOpen[2] ? 'open' : 'closed'}`}>
+                <ul className='text'>
+                  <li>
+                    on <span className="span">github</span>, search for konsole night theme
+                  </li>
+                  <li>
+                    or open
+                    <div className="span-github"><p>https://github.com/lyznne/Konsole-night_Theme.git</p>
+                      <img
+                        src={copy}
+                        alt="copy"
+                        onClick={handleCopyClick}
+                        className={`copy-button-${1} ${copied ? 'copied' : ''}`}
+                      />
+                    </div>
+                  </li>
+                  <li>check the readme file and <span className="span"> clone the repo</span> </li>
+                  <li>open the folder you clone the repo and run </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </section>
+
+
+
       <section id="bottom">
         <div className="center flex">
           <div className="center flex">
