@@ -13,7 +13,7 @@ const Languages = () => {
   const languagesChunks = chunkArray(supportedLanguages, 11);
 
   return (
-    <div className="languages">
+    <div className="languages" id='support'>
       <h1 className="text-gradient text-span h1">supported languages</h1>
       <div className="languages-body">
         {languagesChunks.map((chunk, chunkIndex) => (

@@ -1,4 +1,7 @@
 import React from 'react'
+import { FiMenu } from "react-icons/fi";
+
+
 
 const Navbar = () => {
   return (
@@ -14,6 +17,7 @@ const Navbar = () => {
           <a href="#installation">
             <button className="btn-primary">use theme</button>
           </a>
+          <FiMenu className='menu' />
         </div>
       </div>
     </div>

@@ -8,7 +8,10 @@ import Card from '../components/Card';
 import bottomCardDetails from "../models/DataDetails.jsx";
 import copyDetails from '../models/copyDetails';
 import Languages from '../components/Languages';
+import Box from '../components/Box';
+import CodeSnippet from '../components/CodeSnippet';
 
+import featuresDetails from '../models/featuresDetails';
 
 
 
@@ -73,7 +76,9 @@ const Main = () => {
             </div>
           </div>
           <div className="hero--code">
-
+            <CodeSnippet />
+            <CodeSnippet />
+            <CodeSnippet />
           </div>
         </div>
       </section>
@@ -83,8 +88,14 @@ const Main = () => {
             Deliver an optimized <span className="text-gradient text-span">User Experience</span>
           </h1>
           <p className="text">There are plenty of essential features optimized to provide the best user experience.</p>
-          <div className="features-content">
-
+          <div className="features-content ">
+            {featuresDetails.map((features, index) => (
+              <Box
+                key={index}
+                {...features}
+                index={index + 1}
+              />
+            ))}
           </div>
           <Languages />
         </div>
@@ -170,7 +181,7 @@ const Main = () => {
 
 
       <section id="bottom">
-        <div className="center flex">
+
           <div className="center flex">
             {bottomCardDetails.map((cardDetails, index) => (
               <Card
@@ -181,7 +192,6 @@ const Main = () => {
             ))}
           </div>
 
-        </div>
       </section>
       <Footer />
     </div>
