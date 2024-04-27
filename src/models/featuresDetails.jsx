@@ -5,12 +5,12 @@ import focus from "../assets/focus-e.svg";
 
 const featuresDetails = [
   {
-    icon: "",
+    icon: syntax,
     title: "Elegant &  Dark",
     description: "Enjoy a visually appealing dark color scheme that creates a comfortable coding environment."
   },
   {
-    icon: "",
+    icon: syntax,
     title: "Enhanced Readability",
     description: "Carefully chosen colors ensure clear visibility and easy-to-read text."
   },
@@ -25,7 +25,7 @@ const featuresDetails = [
     description: "The theme's subtle design elements help keep your focus on the code and minimize distractions."
   },
   {
-    icon: "",
+    icon: focus,
     title: "Markdown  Support",
     description: "The theme also supports markdown files and other files like ignore file types ie. .gitignore, .vscodeignore etc."
   }

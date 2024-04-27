@@ -294,6 +294,8 @@ display: none;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--padd-sm);
   align-items: center;
+  justify-content: space-between;
+  
 }
 
 .hero--heading {
@@ -368,7 +370,7 @@ display: none;
 
 
 .hero--code {
-  width: 100%;
+  width: 68%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -474,6 +476,9 @@ display: flex;
 flex-wrap: wrap;
   gap: var(--padd-md);
   margin-top: var(--padd-md);
+
+  margin-left: var(--padd-lg);
+  justify-content: space-between;
   
 }
 
@@ -870,4 +875,23 @@ footer::before {
 
 .footer .rights .text {
   text-transform: capitalize;
+}
+
+
+
+
+
+
+
+/* code spippet  */
+.code {
+  width: 100%;
+
+  height: 300px;
+}
+.code img {
+  object-fit: contain;
+  width: 500px;
+  height: auto;
+
 }

@@ -52,6 +52,7 @@ const Main = () => {
   return (
     <div className="main">
       <section id="hero " className="hero-main">
+
         <div className="hero ">
           <div className="hero--heading">
             <div className="hero-title">
@@ -79,13 +80,16 @@ const Main = () => {
               <p>White theme for konsole night   : <span> coming soon ✨ </span> </p>
             </div>
           </div>
+
           <div className="hero--code">
             <CodeSnippet />
             <CodeSnippet />
-            <CodeSnippet />
+           
           </div>
+
         </div>
       </section>
+
       <section id="features">
 
 
@@ -190,8 +194,6 @@ const Main = () => {
         </div>
       </section>
 
-
-
       <section id="bottom">
 
 
@@ -205,18 +207,8 @@ const Main = () => {
             ))}
           </div>
 
-        <div className="center flex">
-          {bottomCardDetails.map((cardDetails, index) => (
-            <Card
-              key={index}
-              {...cardDetails}
-              index={index + 1}
-            />
-          ))}
-        </div>
-
-
       </section>
+
       <Footer />
     </div>
   )

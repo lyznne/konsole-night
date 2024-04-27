@@ -8,7 +8,7 @@ const Navbar = () => {
     <div className="navbar">
       <div className="nav flex">
         <div className="logo">
-          <a href="#">r</a>
+          <a href="#"></a>
           <h1>Konsole night</h1>
         </div>
         <div className="nav-items flex">
