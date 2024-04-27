@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { DiCoffeescript } from 'react-icons/di';
 
 const codeLines = [
-<<<<<<< HEAD
   'const greet = () => {',
   "  console.log('Hello, world!');",
   '};',
@@ -22,25 +21,10 @@ const CodeSnippet = () => {
       return () => clearTimeout(timeout);
     }
   }, [currentLine]);
-=======
-  `get '/hello', ->
-  'Hello World'
 
 
-  # Append.
-  append = (location, data) ->
-  path = new Pathname location
-  throw new Error "Location does not exist" unless fs.existsSync(location)
-
-  File.open path, 'a', (file) ->
-      file.console.log YAML.dump data
-
-  data`,
-];
-
-const CodeSnippet = () => {
  
->>>>>>> 5913f7b (:tada: :tada: new)
+
 
   return (
     <div className="codesnippet">
@@ -57,7 +41,7 @@ const CodeSnippet = () => {
       </div>
       <div className="codesnippet-contents">
         <pre className="code-container">
-<<<<<<< HEAD
+
           <code>
             {typedCode.map((line, index) => (
               <div key={index} className="code-line">
@@ -65,9 +49,7 @@ const CodeSnippet = () => {
               </div>
             ))}
           </code>
-=======
-        
->>>>>>> 5913f7b (:tada: :tada: new)
+
         </pre>
       </div>
     </div>

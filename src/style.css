@@ -57,12 +57,12 @@
     }
 
     .features-content {
-<<<<<<< HEAD
+
 
         gap: 8px;
-=======
+
         gap: var(--padd-sm);
->>>>>>> 5913f7b (:tada: :tada: new)
+
     }
 
     .box {
@@ -97,17 +97,17 @@
         height: 100%; */
 
     }
-<<<<<<< HEAD
-    .hero {
-        grid-template-columns: 1fr
-    }
-=======
 
     .hero {
         grid-template-columns: 1fr
     }
 
->>>>>>> 5913f7b (:tada: :tada: new)
+
+    .hero {
+        grid-template-columns: 1fr
+    }
+
+
     .install-card {
         width: 100%;
     }
@@ -118,10 +118,9 @@
         justify-content: center;
         height: 100%;
     }
-<<<<<<< HEAD
+
 }
-=======
-}
+
 #installation {
     position: relative;
 }
@@ -147,4 +146,4 @@
         transform: rotate(360deg);
     }
 }
->>>>>>> 5913f7b (:tada: :tada: new)
+

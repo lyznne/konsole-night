@@ -10,7 +10,7 @@ const Card = ({ icon, title, description, link, linkUrl, index }) => {
       <div className="contents">
         <h2>{title}</h2>
         <p className="text">
-          {description} <a href={linkUrl} target="_blank" className="link">{link}</a>
+          {description} <a href={linkUrl} target="_blank" rel="noopener" className="link">{link}</a>
         </p>
       </div>
     </div>
