@@ -154,7 +154,10 @@ white-space: nowrap;
 
 
 section {
+<<<<<<< HEAD
   min-height: 90dvh;
+=======
+>>>>>>> 5913f7b (:tada: :tada: new)
   padding: var(--padd-sm) var(--padd-md);
 }
 
@@ -391,16 +394,26 @@ display: none;
 }
 
 .codesnippet .codesnippet-top .screen-nav {
+<<<<<<< HEAD
   gap: var(--padd-sm);
 }
 
 .codesnippet-top .screen-nav .navigation {
   width: 12px;
   height: 12px;
+=======
+  gap:5px;
+}
+
+.codesnippet-top .screen-nav .navigation {
+  width: 10px;
+  height: 10px;
+>>>>>>> 5913f7b (:tada: :tada: new)
   border-radius: 50%;
 }
 
 
+<<<<<<< HEAD
 code {
   max-height: 300px;
   margin-top: 16px;
@@ -414,6 +427,8 @@ code {
     width: 0;
   }
 }
+=======
+>>>>>>> 5913f7b (:tada: :tada: new)
 
 .codesnippet-top .screen-nav .exit {
   background: var(--alert-color);
@@ -428,6 +443,7 @@ code {
 }
 
 .codesnippet .lang {
+<<<<<<< HEAD
   gap: var(--padd-sm);
   font-size: 14px;
   color: var(--secondary-color-2);
@@ -436,6 +452,16 @@ code {
 
 .codesnippet .lang .lang-icon {
   font-size: 18px;
+=======
+  gap: 6px;
+  font-size: 12px;
+  color: var(--secondary-color-2);
+  margin-left: var(--padd-lg);
+}
+
+.codesnippet .lang .lang-icon {
+  font-size: 17px;
+>>>>>>> 5913f7b (:tada: :tada: new)
 }
 
 .codesnippet .codesnippet-contents {

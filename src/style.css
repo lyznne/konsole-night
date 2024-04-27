@@ -57,8 +57,12 @@
     }
 
     .features-content {
+<<<<<<< HEAD
 
         gap: 8px;
+=======
+        gap: var(--padd-sm);
+>>>>>>> 5913f7b (:tada: :tada: new)
     }
 
     .box {
@@ -93,9 +97,17 @@
         height: 100%; */
 
     }
+<<<<<<< HEAD
     .hero {
         grid-template-columns: 1fr
     }
+=======
+
+    .hero {
+        grid-template-columns: 1fr
+    }
+
+>>>>>>> 5913f7b (:tada: :tada: new)
     .install-card {
         width: 100%;
     }
@@ -106,4 +118,33 @@
         justify-content: center;
         height: 100%;
     }
+<<<<<<< HEAD
 }
+=======
+}
+#installation {
+    position: relative;
+}
+.canvas {
+   position: absolute;
+   top: 18%;
+   left: 18%;
+   width: 70%;
+   height: 70%;
+   z-index: -1;
+   filter: blur(5px);
+    animation: rotateAnimation 20s linear infinite alternate-reverse;
+}
+
+
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+>>>>>>> 5913f7b (:tada: :tada: new)

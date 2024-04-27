@@ -3,6 +3,11 @@ import { useState } from 'react';
 import Footer from './Footer';
 import award from "../assets/award.svg";
 import clock from "../assets/clock.svg";
+<<<<<<< HEAD
+=======
+import canvas from "../assets/canvas.svg";
+
+>>>>>>> 5913f7b (:tada: :tada: new)
 import copy from "../assets/copy.svg";
 import Card from '../components/Card';
 import bottomCardDetails from "../models/DataDetails.jsx";
@@ -83,7 +88,13 @@ const Main = () => {
         </div>
       </section>
       <section id="features">
+<<<<<<< HEAD
         <div className="features">
+=======
+
+        <div className="features" >
+
+>>>>>>> 5913f7b (:tada: :tada: new)
           <h1 className='h1'>
             Deliver an optimized <span className="text-gradient text-span">User Experience</span>
           </h1>
@@ -103,6 +114,12 @@ const Main = () => {
 
 
       <section id="installation">
+<<<<<<< HEAD
+=======
+
+        <img src={canvas} alt="" className="canvas" />
+
+>>>>>>> 5913f7b (:tada: :tada: new)
         <div className="section-head">
           <h1 className='h1' >How to <span className="text-gradient  text-span">install the theme ?</span></h1>
           <p className='text'> If you encounter any issues, please <a className='link' href="#" target="_blank" >open an issue</a> on the GitHub repository.</p>
@@ -182,6 +199,7 @@ const Main = () => {
 
       <section id="bottom">
 
+<<<<<<< HEAD
           <div className="center flex">
             {bottomCardDetails.map((cardDetails, index) => (
               <Card
@@ -191,6 +209,17 @@ const Main = () => {
               />
             ))}
           </div>
+=======
+        <div className="center flex">
+          {bottomCardDetails.map((cardDetails, index) => (
+            <Card
+              key={index}
+              {...cardDetails}
+              index={index + 1}
+            />
+          ))}
+        </div>
+>>>>>>> 5913f7b (:tada: :tada: new)
 
       </section>
       <Footer />
@@ -198,4 +227,8 @@ const Main = () => {
   )
 }
 
+<<<<<<< HEAD
 export default Main;
+=======
+export default Main;
+>>>>>>> 5913f7b (:tada: :tada: new)
