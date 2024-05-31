@@ -28,11 +28,13 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className='app'>
+      <div className="center">
       {isLoading && <Loading progress={loadingProgress} />}
       {isLoading ? null : ''}
       <Navbar /> 
       <Main />
+      </div>
     </div>
   );
 }
